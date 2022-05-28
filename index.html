@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Machine Learning Exercise: Biased Dice</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8"/>
+ 	</head>
+  	<body>
+	      <h3 id="pageSubheading">Industry 4.0 - Reinforcement Learning Exercise</h3>
+	      <h1 id="pageHeading">Dodgy Online Casino</h1>
+        
+        <section id="projectDescription">
+          <p>The aim of this game is to sucessfully predict if the number rolled by a dice will be <b>odd</b> or <b>even</b></p>
+          <p>With a normal dice, the chance of rolling odd or even is <b>50/50</b>. However, in this casino the game has been <b>rigged</b></p>
+          <p>Your task is to use <b>reinforcement learning</b> to find out how you can increase your odds of winning</p>
+          <p>To do this you will use a container of 10 red LEDs and 10 green LEDs to make your predictions and to keep track of how successful you have been</p>
+        </section>
+        
+        <div id="columns">
+          <section id="howToPlay">
+            <h3>How To Play</h3>
+            <ol>
+              <li>
+                <p>Make a prediction by closing your eyes and taking an LED from your container</p>
+                <p style="color: red;">Red = Even</p>
+                <p style="color: green;">Green = Odd</p>
+              </li>
+              <li>
+                <p>Click "Roll" to roll the dice</p>
+              </li>
+              <li>
+                <p>If the prediction was <b>correct</b>, put the LED back in the container</p>
+                <p>If the prediction was <b>incorrect</b>, put the LED to the side</p>
+              </li>
+            </ol>  
+            <p>After you have played <b>20 times</b>, count how many of each LED is in your container</p>
+            <p>Using this information determine if you would be more <b>likely</b> to win if you predict odd or even?</p>
+            <p>Roll the dice a further 20 times predicting which outcome you have found to be most likely. Keep track of how many times you win</p>
+            <p><b>What has the machine learned?</b></p>
+          </section>
+          <section id="diceRoller">
+            <img id="diceGraphic" src="faces/dice.png" />
+            <div id="diceControl">
+              <button onclick="updateDice(rollDice());">Roll</button>
+            </div>
+            <p>Times played: <span id="timesPlayed">0</span></p>
+          </section>
+        </div>
+        <script src="dice.js"></script>
+  	</body>
+</html>

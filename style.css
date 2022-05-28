@@ -1,0 +1,88 @@
+body {
+	color: #333;
+	margin: 0;
+	padding: 0;
+	font: 14pt "Tahoma", sans-serif;
+	text-align: center;
+}
+
+#pageSubheading {
+	font-size: 16pt;
+	color: #939393;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+#pageHeading {
+	margin-top: 10px;
+	font-size: 24pt;
+}
+
+#columns {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#projectDescription {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#howToPlay {
+  padding-right: 25px;
+  flex-grow: 1;
+}
+
+#diceControl, #diceControl > button {
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+#diceRoller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 250px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  #columns {
+    flex-wrap: wrap;
+  }
+}
+
+/* Dice Shake Animation, from: https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+
+.shaken {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
